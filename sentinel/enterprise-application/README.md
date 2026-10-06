@@ -43,3 +43,12 @@ That pack currently includes:
 - Conditional Access failure spikes.
 
 Use this repository for **architecture context, deployment, and validation**. Use the Sentinel KQL Library as the **canonical detection-engineering collection**.
+
+
+## Deployable analytics rules
+
+The production-oriented Bicep deployment package is maintained in the Sentinel KQL Library:
+
+**[Deploy HA-ZT-001 through HA-ZT-003 with Bicep](https://github.com/mhartson310/Sentinel-KQL-Library/tree/main/deploy/bicep/zero-trust-analytics)**
+
+The package deploys the three rules as Microsoft Sentinel Scheduled analytics rules with severity, MITRE mappings, scheduling, entity mappings, custom details, incident creation, and incident grouping.
