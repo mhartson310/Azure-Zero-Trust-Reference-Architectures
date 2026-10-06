@@ -47,3 +47,22 @@ Reusable KQL should be mirrored into:
 https://github.com/mhartson310/Sentinel-KQL-Library
 
 This repository remains the canonical source for Zero Trust architecture context and control intent. The Sentinel KQL Library remains the reusable detection-engineering collection.
+
+
+## Available detection packs
+
+### Enterprise Application
+
+The first implementation is available at:
+
+**[Enterprise Application detection pack](enterprise-application/README.md)**
+
+It includes hunting/analytics-rule candidates for:
+
+- protected-service public exposure changes;
+- privileged RBAC assignments;
+- diagnostic settings changes;
+- Key Vault access anomalies;
+- Conditional Access failure spikes.
+
+These detections pair directly with the [Terraform enterprise application implementation](../terraform/enterprise-application/README.md).
