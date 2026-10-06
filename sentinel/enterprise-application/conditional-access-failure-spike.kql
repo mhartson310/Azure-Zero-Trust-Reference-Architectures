@@ -1,0 +1,15 @@
+// Zero Trust: Conditional Access failure spike
+// Tables: SigninLogs
+SigninLogs
+| where TimeGenerated > ago(30m)
+| where ConditionalAccessStatus =~ "failure"
+| summarize
+    Failures=count(),
+    Apps=make_set(AppDisplayName, 10),
+    IPs=make_set(IPAddress, 10),
+    Results=make_set(ResultType, 10)
+    by UserPrincipalName, bin(TimeGenerated, 10m)
+| where Failures >= 8
+| order by Failures desc
+// Tune exclusions for known test/service identities.
+// Investigate device state, sign-in risk, location, app, and CA policy result.
