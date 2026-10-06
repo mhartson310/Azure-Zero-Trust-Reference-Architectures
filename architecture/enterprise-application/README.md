@@ -94,3 +94,18 @@ The first deployable implementation for this pattern is now available:
 - **[Sentinel detection pack](../../sentinel/enterprise-application/README.md)** — KQL for public exposure changes, privileged RBAC assignments, diagnostic-setting changes, Key Vault anomalies, and Conditional Access failures.
 
 The implementation deliberately keeps tenant-wide Conditional Access and PIM configuration outside the workload deployment. Those controls should be governed centrally and rolled out with appropriate emergency-access and exclusion design.
+
+
+## Negative-security validation
+
+The architecture now includes executable tests that prove the expected failure paths:
+
+- public endpoints remain disabled;
+- private endpoint connections are approved;
+- the workload identity has narrow read/secret permissions only;
+- diagnostic settings remain connected to Log Analytics;
+- protected service names resolve privately;
+- the managed identity can read approved test data;
+- an unauthorized Blob write is denied.
+
+See **[Negative-Security Validation](../../tests/enterprise-application/README.md)**.
