@@ -316,3 +316,10 @@ Together, the portfolio covers:
 Cloud Security Architect | Azure | Zero Trust | AI Security | SIEM/XDR
 
 Practical reference architectures, security patterns, detection engineering, and governance guidance for modern Azure environments.
+
+
+## End-to-end validation
+
+Use the **[Zero Trust end-to-end validation runbook](docs/validation/zero-trust-end-to-end-runbook.md)** to prove the full lab path:
+
+**Terraform → negative tests → Sentinel detections → automation → approval-gated remediation → post-remediation validation**
