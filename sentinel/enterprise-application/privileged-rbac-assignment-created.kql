@@ -1,0 +1,11 @@
+// Zero Trust: privileged RBAC assignment created
+// Tables: AzureActivity
+AzureActivity
+| where TimeGenerated > ago(1h)
+| where OperationNameValue =~ "MICROSOFT.AUTHORIZATION/ROLEASSIGNMENTS/WRITE"
+| where ActivityStatusValue =~ "Success"
+| project TimeGenerated, Caller, CallerIpAddress, ResourceGroup, ResourceId, CorrelationId, Properties
+| order by TimeGenerated desc
+// Enrich with change-ticket / approved-admin watchlists before promotion.
+// Investigate assignments of Owner, User Access Administrator, Contributor,
+// or workload-specific high-impact data-plane roles.
