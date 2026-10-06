@@ -61,3 +61,12 @@ The Sentinel KQL Library now also contains the SOAR layer for HA-ZT-001 through 
 **[Zero Trust automated response + playbooks](https://github.com/mhartson310/Sentinel-KQL-Library/tree/main/deploy/playbooks/zero-trust)**
 
 The package adds incident-triggered Logic Apps plus Sentinel automation rules for labeling, task creation, and playbook execution. The first version deliberately automates triage and analyst guidance rather than destructive remediation.
+
+
+## Conditional remediation
+
+For confirmed unauthorized changes, the Sentinel KQL Library now includes a second-stage response layer:
+
+**[Approval-gated conditional remediation](https://github.com/mhartson310/Sentinel-KQL-Library/tree/main/deploy/playbooks/zero-trust/conditional-remediation)**
+
+The playbooks require explicit analyst approval plus target validation before they delete an unauthorized RBAC assignment or restore the reference diagnostic baseline. They then validate the resulting state and update the incident.
