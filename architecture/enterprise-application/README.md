@@ -2,6 +2,8 @@
 
 This reference architecture applies Zero Trust principles to a common enterprise application workload.
 
+![Zero Trust Enterprise Application on Azure](zero-trust-enterprise-application.svg)
+
 ## Architecture
 
 ```mermaid
