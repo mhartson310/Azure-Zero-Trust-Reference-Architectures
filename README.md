@@ -68,7 +68,7 @@ Azure Monitor + Defender + Sentinel
 - Azure Monitor
 - Microsoft Sentinel
 
-[Explore the architecture →](architecture/enterprise-application/README.md) · [Terraform implementation →](terraform/enterprise-application/README.md) · [Sentinel detections →](sentinel/enterprise-application/README.md) · [Negative-security tests →](tests/enterprise-application/README.md) · [Sentinel KQL Library — Zero Trust detection pack →](https://github.com/mhartson310/Sentinel-KQL-Library/tree/main/kql-queries/zero-trust/enterprise-application) · [Deployable Sentinel rules →](https://github.com/mhartson310/Sentinel-KQL-Library/tree/main/deploy/bicep/zero-trust-analytics)
+[Explore the architecture →](architecture/enterprise-application/README.md) · [Terraform implementation →](terraform/enterprise-application/README.md) · [Sentinel detections →](sentinel/enterprise-application/README.md) · [Negative-security tests →](tests/enterprise-application/README.md) · [Sentinel KQL Library — Zero Trust detection pack →](https://github.com/mhartson310/Sentinel-KQL-Library/tree/main/kql-queries/zero-trust/enterprise-application) · [Deployable Sentinel rules →](https://github.com/mhartson310/Sentinel-KQL-Library/tree/main/deploy/bicep/zero-trust-analytics) · [Automated response →](https://github.com/mhartson310/Sentinel-KQL-Library/tree/main/deploy/playbooks/zero-trust)
 
 ---
 
