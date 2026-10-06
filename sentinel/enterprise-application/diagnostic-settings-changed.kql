@@ -1,0 +1,12 @@
+// Zero Trust: diagnostic settings changed
+// Tables: AzureActivity
+AzureActivity
+| where TimeGenerated > ago(1h)
+| where OperationNameValue has_any (
+    "MICROSOFT.INSIGHTS/DIAGNOSTICSETTINGS/WRITE",
+    "MICROSOFT.INSIGHTS/DIAGNOSTICSETTINGS/DELETE"
+)
+| project TimeGenerated, Caller, CallerIpAddress, ActivityStatusValue, OperationNameValue, ResourceId, CorrelationId, Properties
+| order by TimeGenerated desc
+// Alert aggressively on DELETE for critical resources.
+// WRITE should be checked against approved IaC identities/change windows.
