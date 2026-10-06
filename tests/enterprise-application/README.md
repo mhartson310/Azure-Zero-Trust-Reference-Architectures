@@ -58,3 +58,10 @@ python tests/enterprise-application/runtime_storage_tests.py
 ## Release gate
 
 The reference implementation passes the first negative-security gate only if public access is blocked, private endpoints are approved, least privilege is preserved, diagnostics are present, private DNS resolves correctly, approved reads work, and unauthorized writes fail.
+
+
+## End-to-end validation runbook
+
+For a full subscription-level lab test, including deliberate HA-ZT-001, HA-ZT-002, and HA-ZT-003 triggers plus approval-gated remediation, use:
+
+**[Zero Trust end-to-end validation runbook](../../docs/validation/zero-trust-end-to-end-runbook.md)**
