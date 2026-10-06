@@ -2,6 +2,8 @@
 
 A landing zone is not Zero Trust simply because it has a hub VNet and Azure Policy.
 
+![Zero Trust Azure Landing Zone](zero-trust-landing-zone.svg)
+
 This architecture applies Zero Trust across the Azure platform control plane.
 
 ## Control-plane model
