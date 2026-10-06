@@ -1,0 +1,10 @@
+location            = "westus2"
+resource_group_name = "rg-zt-enterprise-app-demo"
+prefix              = "ztapp"
+environment         = "demo"
+log_retention_days  = 30
+
+# Prefer PIM for production administration.
+# allowed_admin_object_ids = [
+#   "00000000-0000-0000-0000-000000000000"
+# ]
