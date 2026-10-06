@@ -1,0 +1,15 @@
+// Zero Trust: protected service public access enabled
+// Tables: AzureActivity
+AzureActivity
+| where TimeGenerated > ago(1h)
+| where OperationNameValue has_any (
+    "MICROSOFT.WEB/SITES/WRITE",
+    "MICROSOFT.KEYVAULT/VAULTS/WRITE",
+    "MICROSOFT.STORAGE/STORAGEACCOUNTS/WRITE"
+)
+| where ActivityStatusValue =~ "Success"
+| extend props = todynamic(Properties)
+| project TimeGenerated, Caller, CallerIpAddress, OperationNameValue, ResourceGroup, ResourceId, CorrelationId, props
+| order by TimeGenerated desc
+// Investigate successful control-plane writes to protected services.
+// Confirm whether publicNetworkAccess or equivalent exposure settings changed.
