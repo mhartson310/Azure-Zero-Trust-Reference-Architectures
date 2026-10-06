@@ -84,3 +84,13 @@ flowchart LR
 - Conditional Access examples
 - Sentinel detections
 - negative test harness
+
+
+## Implementation
+
+The first deployable implementation for this pattern is now available:
+
+- **[Terraform](../../terraform/enterprise-application/README.md)** — App Service, Managed Identity, private endpoints, Key Vault, Storage, Private DNS, Log Analytics, and diagnostics.
+- **[Sentinel detection pack](../../sentinel/enterprise-application/README.md)** — KQL for public exposure changes, privileged RBAC assignments, diagnostic-setting changes, Key Vault anomalies, and Conditional Access failures.
+
+The implementation deliberately keeps tenant-wide Conditional Access and PIM configuration outside the workload deployment. Those controls should be governed centrally and rolled out with appropriate emergency-access and exclusion design.
