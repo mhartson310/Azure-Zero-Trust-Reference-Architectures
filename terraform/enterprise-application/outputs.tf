@@ -10,6 +10,10 @@ output "app_identity_client_id" {
   value = azurerm_user_assigned_identity.app.client_id
 }
 
+output "app_identity_principal_id" {
+  value = azurerm_user_assigned_identity.app.principal_id
+}
+
 output "key_vault_name" {
   value = azurerm_key_vault.this.name
 }
