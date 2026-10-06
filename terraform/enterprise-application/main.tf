@@ -1,8 +1,8 @@
 locals {
   tags = {
-    workload  = "zero-trust-enterprise-application"
+    workload    = "zero-trust-enterprise-application"
     environment = var.environment
-    managedBy = "terraform"
+    managedBy   = "terraform"
   }
 }
 
@@ -114,11 +114,11 @@ resource "azurerm_linux_web_app" "this" {
   }
 
   app_settings = {
-    "AZURE_CLIENT_ID"                   = azurerm_user_assigned_identity.app.client_id
-    "KEY_VAULT_URI"                     = azurerm_key_vault.this.vault_uri
-    "STORAGE_ACCOUNT_NAME"              = azurerm_storage_account.this.name
-    "WEBSITE_RUN_FROM_PACKAGE"          = "1"
     "APPLICATIONINSIGHTS_CONNECTION_STRING" = azurerm_application_insights.this.connection_string
+    "AZURE_CLIENT_ID"                       = azurerm_user_assigned_identity.app.client_id
+    "KEY_VAULT_URI"                         = azurerm_key_vault.this.vault_uri
+    "STORAGE_ACCOUNT_NAME"                  = azurerm_storage_account.this.name
+    "WEBSITE_RUN_FROM_PACKAGE"              = "1"
   }
 
   tags = local.tags
@@ -134,16 +134,16 @@ resource "azurerm_application_insights" "this" {
 }
 
 resource "azurerm_key_vault" "this" {
-  name                       = "kv-${var.prefix}-${random_string.suffix.result}"
-  location                   = azurerm_resource_group.this.location
-  resource_group_name        = azurerm_resource_group.this.name
-  tenant_id                  = data.azurerm_client_config.current.tenant_id
-  sku_name                   = "standard"
-  enable_rbac_authorization  = true
-  purge_protection_enabled   = true
-  soft_delete_retention_days = 7
+  name                          = "kv-${var.prefix}-${random_string.suffix.result}"
+  location                      = azurerm_resource_group.this.location
+  resource_group_name           = azurerm_resource_group.this.name
+  tenant_id                     = data.azurerm_client_config.current.tenant_id
+  sku_name                      = "standard"
+  enable_rbac_authorization     = true
+  purge_protection_enabled      = true
+  soft_delete_retention_days    = 7
   public_network_access_enabled = false
-  tags                       = local.tags
+  tags                          = local.tags
 }
 
 data "azurerm_client_config" "current" {}
