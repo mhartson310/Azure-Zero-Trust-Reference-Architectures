@@ -2,6 +2,8 @@
 
 Privileged access is one of the highest-impact trust boundaries in Azure.
 
+![Zero Trust Privileged Access](zero-trust-privileged-access.svg)
+
 The design goal is not simply stronger MFA.
 
 It is to reduce **who can become privileged, when they can become privileged, where they can administer from, what they can do, and how quickly suspicious privilege can be detected.**
