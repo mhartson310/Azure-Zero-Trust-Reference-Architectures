@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="900" viewBox="0 0 1600 900">
+<rect width="1600" height="900" fill="#f7fbff"/>
+<defs><style>
+.t{font-family:Arial,Helvetica,sans-serif;fill:#102a43}.n{fill:#071b4a}.b{fill:#0878ed}.m{fill:#526a86}
+.h1{font:700 62px Arial}.h2{font:700 32px Arial}.h3{font:700 24px Arial}.p{font:400 19px Arial}.s{font:400 16px Arial}.sb{font:700 16px Arial}
+</style></defs>
+<text x="45" y="45" class="b h3">AZURE SECURITY ARCHITECTURE</text>
+<text x="45" y="115" class="n h1">Azure Zero Trust</text><text x="45" y="175" class="b h1">Control Model</text>
+<text x="45" y="218" class="m p">Identity • Privilege • Network • Workload • Data • Monitoring</text>
+<rect x="1160" y="28" width="395" height="205" rx="18" fill="#fff" stroke="#0878ed" stroke-width="2"/>
+<text x="1190" y="64" class="b h3">KEY OUTCOMES</text>
+<text x="1190" y="102" class="t sb">✓ Clear Azure security design lens</text>
+<text x="1190" y="136" class="t sb">✓ Layered enforcement</text>
+<text x="1190" y="170" class="t sb">✓ Testable Zero Trust decisions</text>
+<text x="1190" y="204" class="t sb">✓ Better monitoring and validation</text>
+
+<rect x="28" y="265" width="1544" height="245" rx="22" fill="#fff" stroke="#b7daf7" stroke-width="2"/>
+<circle cx="60" cy="300" r="27" fill="#0878ed"/><text x="60" y="308" text-anchor="middle" fill="#fff" font-family="Arial" font-size="22" font-weight="700">1</text>
+<text x="100" y="312" class="n h2">SIX CONTROL PLANES</text>
+<text x="455" y="310" class="m p">The layers that reinforce each other in a Zero Trust architecture.</text>
+<g transform="translate(48,345)"><rect width="230" height="135" rx="16" fill="#f8fbff" stroke="#bfdff7"/><circle cx="115" cy="35" r="22" fill="#1395ff"/><text x="115" y="76" text-anchor="middle" class="n h3">Identity</text><text x="115" y="103" text-anchor="middle" class="m s">Verify users</text><text x="115" y="124" text-anchor="middle" class="m s"> apps, and workload identities.</text></g><g transform="translate(300,345)"><rect width="230" height="135" rx="16" fill="#f8fbff" stroke="#bfdff7"/><circle cx="115" cy="35" r="22" fill="#10a856"/><text x="115" y="76" text-anchor="middle" class="n h3">Privilege</text><text x="115" y="103" text-anchor="middle" class="m s">Least privilege</text><text x="115" y="124" text-anchor="middle" class="m s"> RBAC, PIM, managed identity.</text></g><g transform="translate(552,345)"><rect width="230" height="135" rx="16" fill="#f8fbff" stroke="#bfdff7"/><circle cx="115" cy="35" r="22" fill="#7b4de2"/><text x="115" y="76" text-anchor="middle" class="n h3">Network</text><text x="115" y="103" text-anchor="middle" class="m s">Segmentation</text><text x="115" y="124" text-anchor="middle" class="m s"> private access, traffic control.</text></g><g transform="translate(804,345)"><rect width="230" height="135" rx="16" fill="#f8fbff" stroke="#bfdff7"/><circle cx="115" cy="35" r="22" fill="#14a5e5"/><text x="115" y="76" text-anchor="middle" class="n h3">Workload</text><text x="115" y="103" text-anchor="middle" class="m s">Secure applications</text><text x="115" y="124" text-anchor="middle" class="m s"> services, and admin paths.</text></g><g transform="translate(1056,345)"><rect width="230" height="135" rx="16" fill="#fff9e8" stroke="#bfdff7"/><circle cx="115" cy="35" r="22" fill="#f0aa00"/><text x="115" y="76" text-anchor="middle" class="n h3">Data</text><text x="115" y="103" text-anchor="middle" class="m s">Classification</text><text x="115" y="124" text-anchor="middle" class="m s"> access control, and governance.</text></g><g transform="translate(1308,345)"><rect width="230" height="135" rx="16" fill="#f8fbff" stroke="#bfdff7"/><circle cx="115" cy="35" r="22" fill="#1495ff"/><text x="115" y="76" text-anchor="middle" class="n h3">Monitoring</text><text x="115" y="103" text-anchor="middle" class="m s">Logs</text><text x="115" y="124" text-anchor="middle" class="m s"> detections, and continuous validation.</text></g>
+
+<rect x="28" y="530" width="1544" height="155" rx="22" fill="#fff" stroke="#b7daf7" stroke-width="2"/>
+<circle cx="60" cy="565" r="27" fill="#0878ed"/><text x="60" y="573" text-anchor="middle" fill="#fff" font-family="Arial" font-size="22" font-weight="700">2</text>
+<text x="100" y="577" class="n h2">HOW THE MODEL WORKS</text>
+<g transform="translate(55,610)"><rect width="220" height="52" rx="12" fill="#f7fbff" stroke="#bdddf7"/><text x="110" y="32" text-anchor="middle" class="t sb">1. Verify explicitly</text><text x="236" y="32" class="b h3">→</text></g><g transform="translate(307,610)"><rect width="220" height="52" rx="12" fill="#f7fbff" stroke="#bdddf7"/><text x="110" y="32" text-anchor="middle" class="t sb">2. Minimize privilege</text><text x="236" y="32" class="b h3">→</text></g><g transform="translate(559,610)"><rect width="220" height="52" rx="12" fill="#f7fbff" stroke="#bdddf7"/><text x="110" y="32" text-anchor="middle" class="t sb">3. Restrict paths</text><text x="236" y="32" class="b h3">→</text></g><g transform="translate(811,610)"><rect width="220" height="52" rx="12" fill="#f7fbff" stroke="#bdddf7"/><text x="110" y="32" text-anchor="middle" class="t sb">4. Protect workloads</text><text x="236" y="32" class="b h3">→</text></g><g transform="translate(1063,610)"><rect width="220" height="52" rx="12" fill="#f7fbff" stroke="#bdddf7"/><text x="110" y="32" text-anchor="middle" class="t sb">5. Govern data</text><text x="236" y="32" class="b h3">→</text></g><g transform="translate(1315,610)"><rect width="220" height="52" rx="12" fill="#f7fbff" stroke="#bdddf7"/><text x="110" y="32" text-anchor="middle" class="t sb">6. Detect + validate</text></g>
+<text x="800" y="677" text-anchor="middle" class="b sb">Zero Trust works when the control planes reinforce each other rather than operate in isolation.</text>
+
+<rect x="28" y="705" width="1544" height="125" rx="22" fill="#f0f7ff" stroke="#0878ed" stroke-width="2"/>
+<circle cx="60" cy="744" r="27" fill="#0878ed"/><text x="60" y="752" text-anchor="middle" fill="#fff" font-family="Arial" font-size="22" font-weight="700">3</text>
+<text x="100" y="753" class="b h3">DESIGN PRINCIPLE</text>
+<text x="100" y="795" class="n h3">Zero Trust is not one control. It is identity, least privilege, private access, data protection, and monitoring working together.</text>
+</svg>
