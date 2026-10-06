@@ -24,3 +24,22 @@ They focus on **control changes and failure paths** rather than generic malware 
 6. Attach investigation steps to each alert.
 
 A detection is an **investigation trigger**, not automatic proof of compromise.
+
+
+## Canonical reusable KQL
+
+The architecture-local examples above stay close to the reference design.
+
+The reusable, tuned KQL versions are maintained in the **Sentinel KQL Library**:
+
+**[Zero Trust Enterprise Application detection pack](https://github.com/mhartson310/Sentinel-KQL-Library/tree/main/kql-queries/zero-trust/enterprise-application)**
+
+That pack currently includes:
+
+- protected-service exposure changes;
+- privileged RBAC assignment creation;
+- diagnostic-setting changes;
+- Key Vault access anomalies;
+- Conditional Access failure spikes.
+
+Use this repository for **architecture context, deployment, and validation**. Use the Sentinel KQL Library as the **canonical detection-engineering collection**.
