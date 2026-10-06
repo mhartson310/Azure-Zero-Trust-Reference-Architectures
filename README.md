@@ -10,6 +10,8 @@ This repository focuses on a simple question:
 
 The goal is to move beyond diagrams and slogans into repeatable architecture patterns, implementation decisions, controls, validation steps, and detection ideas.
 
+![Azure Zero Trust Control Model](architecture/azure-zero-trust-control-model.svg)
+
 ---
 
 ## Zero Trust principles
