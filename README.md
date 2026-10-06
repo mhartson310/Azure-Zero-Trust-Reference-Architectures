@@ -30,7 +30,7 @@ These principles are based on Microsoft's Zero Trust guidance for Azure.
 
 ### 1. Zero Trust Enterprise Application on Azure
 
-**Status: Foundation available**
+**Status: Architecture + Terraform + Sentinel detection pack available**
 
 A practical workload architecture showing how identity, authorization, network isolation, workload identity, data protection, and monitoring work together.
 
@@ -68,7 +68,7 @@ Azure Monitor + Defender + Sentinel
 - Azure Monitor
 - Microsoft Sentinel
 
-[Explore the architecture →](architecture/enterprise-application/README.md)
+[Explore the architecture →](architecture/enterprise-application/README.md) · [Terraform implementation →](terraform/enterprise-application/README.md) · [Sentinel detections →](sentinel/enterprise-application/README.md)
 
 ---
 
@@ -279,14 +279,14 @@ Together, the portfolio covers:
 
 ### Phase 3 — Implementation
 - [ ] Bicep examples
-- [ ] Terraform examples
+- [x] Terraform enterprise-application example
 - [ ] Azure Policy examples
 - [ ] Conditional Access examples
 - [ ] PIM / RBAC patterns
 - [ ] Private Link patterns
 
 ### Phase 4 — Detection and validation
-- [ ] Sentinel hunting queries
+- [x] Sentinel enterprise-application hunting queries
 - [ ] Sentinel analytics rules
 - [ ] validation scripts
 - [ ] negative test cases
