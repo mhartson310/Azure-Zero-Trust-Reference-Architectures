@@ -1,0 +1,68 @@
+name: Zero Trust Negative Security Validation
+
+on:
+  workflow_dispatch:
+    inputs:
+      resource_group:
+        description: "Deployed resource group"
+        required: true
+        default: "rg-zt-enterprise-app-demo"
+      web_app_name:
+        description: "Terraform output: web_app_name"
+        required: true
+      key_vault_name:
+        description: "Terraform output: key_vault_name"
+        required: true
+      storage_account_name:
+        description: "Terraform output: storage_account_name"
+        required: true
+      app_identity_principal_id:
+        description: "Managed identity principal ID"
+        required: true
+      log_analytics_workspace_id:
+        description: "Terraform output: log_analytics_workspace_id"
+        required: true
+
+permissions:
+  contents: read
+  id-token: write
+
+jobs:
+  control-plane-negative-tests:
+    runs-on: ubuntu-latest
+    env:
+      RESOURCE_GROUP: \${{ inputs.resource_group }}
+      WEB_APP_NAME: \${{ inputs.web_app_name }}
+      KEY_VAULT_NAME: \${{ inputs.key_vault_name }}
+      STORAGE_ACCOUNT_NAME: \${{ inputs.storage_account_name }}
+      APP_IDENTITY_PRINCIPAL_ID: \${{ inputs.app_identity_principal_id }}
+      LOG_ANALYTICS_WORKSPACE_ID: \${{ inputs.log_analytics_workspace_id }}
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Azure login with OIDC
+        uses: azure/login@v2
+        with:
+          client-id: \${{ secrets.AZURE_CLIENT_ID }}
+          tenant-id: \${{ secrets.AZURE_TENANT_ID }}
+          subscription-id: \${{ secrets.AZURE_SUBSCRIPTION_ID }}
+
+      - name: Run control-plane negative-security tests
+        run: |
+          chmod +x tests/enterprise-application/*.sh
+          tests/enterprise-application/run-control-plane-tests.sh
+
+  private-dns-test:
+    if: \${{ false }}
+    runs-on: [self-hosted, linux]
+    env:
+      WEB_APP_NAME: \${{ inputs.web_app_name }}
+      KEY_VAULT_NAME: \${{ inputs.key_vault_name }}
+      STORAGE_ACCOUNT_NAME: \${{ inputs.storage_account_name }}
+    steps:
+      - uses: actions/checkout@v4
+      - name: Validate private DNS
+        run: |
+          chmod +x tests/enterprise-application/test-private-dns.sh
+          tests/enterprise-application/test-private-dns.sh
