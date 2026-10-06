@@ -1,0 +1,14 @@
+// Zero Trust: unusual Key Vault access volume
+// Table commonly used when Key Vault resource logs are sent to Log Analytics.
+// Adjust table/schema to your diagnostic mode.
+AzureDiagnostics
+| where TimeGenerated > ago(30m)
+| where ResourceProvider =~ "MICROSOFT.KEYVAULT"
+| where OperationName has_any ("SecretGet", "SecretList", "KeyGet", "KeyList")
+| summarize
+    Operations=count(),
+    Vaults=make_set(Resource, 10),
+    CallerIPs=make_set(CallerIPAddress, 10)
+    by identity_claim_appid_g, identity_claim_oid_g, bin(TimeGenerated, 10m)
+| where Operations >= 25
+| order by Operations desc
