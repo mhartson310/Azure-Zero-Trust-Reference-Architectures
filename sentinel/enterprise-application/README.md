@@ -52,3 +52,12 @@ The production-oriented Bicep deployment package is maintained in the Sentinel K
 **[Deploy HA-ZT-001 through HA-ZT-003 with Bicep](https://github.com/mhartson310/Sentinel-KQL-Library/tree/main/deploy/bicep/zero-trust-analytics)**
 
 The package deploys the three rules as Microsoft Sentinel Scheduled analytics rules with severity, MITRE mappings, scheduling, entity mappings, custom details, incident creation, and incident grouping.
+
+
+## Automated response
+
+The Sentinel KQL Library now also contains the SOAR layer for HA-ZT-001 through HA-ZT-003:
+
+**[Zero Trust automated response + playbooks](https://github.com/mhartson310/Sentinel-KQL-Library/tree/main/deploy/playbooks/zero-trust)**
+
+The package adds incident-triggered Logic Apps plus Sentinel automation rules for labeling, task creation, and playbook execution. The first version deliberately automates triage and analyst guidance rather than destructive remediation.
