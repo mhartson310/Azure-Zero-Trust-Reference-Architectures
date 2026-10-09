@@ -6,7 +6,7 @@ fail() { printf 'FAIL  %s\n' "$1" >&2; return 1; }
 
 require_env() {
   local name="$1"
-  if [[ -z "\${!name:-}" ]]; then
+  if [[ -z "${!name:-}" ]]; then
     echo "Missing required environment variable: $name" >&2
     exit 2
   fi
