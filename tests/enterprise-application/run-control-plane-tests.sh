@@ -10,7 +10,7 @@ tests=(
 )
 
 failures=0
-for test in "\${tests[@]}"; do
+for test in "${tests[@]}"; do
   echo
   echo "=== $test ==="
   if ! "$base/$test"; then
