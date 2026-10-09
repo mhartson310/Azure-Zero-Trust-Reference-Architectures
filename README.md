@@ -23,6 +23,21 @@ The goal is to move beyond diagrams and slogans into repeatable architecture pat
 
 ---
 
+## Engineering proof and review path
+
+**Problem → Architecture → Trust boundaries → Threats → Controls → Deployment → Validation → Monitoring**
+
+| Review question | Evidence |
+|---|---|
+| What is the reference architecture? | [Enterprise application](architecture/enterprise-application/README.md) |
+| What security decisions were made? | [Architecture decisions](docs/architecture-decisions.md) and [control matrix](docs/control-matrix.md) |
+| What is deployable? | [Terraform implementation](terraform/enterprise-application/README.md) |
+| How are denied paths tested? | [Negative-security tests](tests/enterprise-application/README.md) |
+| How is control drift detected/responded to? | [Sentinel KQL and SOAR](https://github.com/mhartson310/Sentinel-KQL-Library/tree/main/kql-queries/zero-trust/enterprise-application) |
+| How is end-to-end validation planned? | [Azure validation runbook](docs/validation/zero-trust-end-to-end-runbook.md) |
+
+**Validation boundary:** An authored runbook and passing static CI are not proof that destructive remediation was exercised successfully in Azure. Record live evidence before claiming operational validation.
+
 ## Zero Trust principles
 
 | Principle | Azure interpretation |
