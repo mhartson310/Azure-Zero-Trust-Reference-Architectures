@@ -23,6 +23,10 @@ The goal is to move beyond diagrams and slogans into repeatable architecture pat
 
 ---
 
+## Validation status and evidence
+
+**Azure live end-to-end testing: not yet performed or published.** The current [validation-evidence register](docs/validation/evidence/README.md) lists required proof, unresolved safety issues, and an [evidence report template](docs/validation/evidence/template.md). Static checks and authored playbooks are not presented as live remediation success.
+
 ## Engineering proof and review path
 
 **Problem → Architecture → Trust boundaries → Threats → Controls → Deployment → Validation → Monitoring**
