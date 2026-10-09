@@ -10,6 +10,15 @@ This repository focuses on a simple question:
 
 The goal is to move beyond diagrams and slogans into repeatable architecture patterns, implementation decisions, controls, validation steps, and detection ideas.
 
+## What this demonstrates
+
+- Zero Trust architecture across identity, privilege, networking, workloads, data, and monitoring;
+- Terraform implementation with Managed Identity, Private Link, Key Vault, Storage, and Log Analytics;
+- negative-security testing that proves controls fail safely;
+- Microsoft Sentinel KQL and scheduled analytics rules;
+- automation rules, Logic Apps playbooks, and approval-gated remediation;
+- end-to-end validation from architecture through detection and response.
+
 ![Azure Zero Trust Control Model](architecture/azure-zero-trust-control-model.svg)
 
 ---
