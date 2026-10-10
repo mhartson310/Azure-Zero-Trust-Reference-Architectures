@@ -10,6 +10,10 @@ This repository focuses on a simple question:
 
 The goal is to move beyond diagrams and slogans into repeatable architecture patterns, implementation decisions, controls, validation steps, and detection ideas.
 
+## Architecture decisions and business value
+
+Use the [reusable architecture decision framework](docs/decision-framework/architecture-decision-framework/README.md), [ADR template](docs/decision-framework/architecture-decision-framework/ADR-template.md), and [business-case template](docs/decision-framework/architecture-decision-framework/business-case-template.md). The [Zero Trust decision examples](docs/decision-framework/zero-trust-architecture-decisions.md) compare private connectivity, managed identity, and approval-gated response with explicit trade-offs, costs, and acceptance gates.
+
 ## What this demonstrates
 
 - Zero Trust architecture across identity, privilege, networking, workloads, data, and monitoring;
