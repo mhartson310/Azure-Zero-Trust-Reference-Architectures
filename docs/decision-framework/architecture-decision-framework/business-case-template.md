@@ -31,6 +31,25 @@ Reference relevant ADRs. Include privacy, security, resilience, and operational 
 ## Pilot / validation plan
 Specify sample size, duration, success thresholds, rollback and how outcomes will be measured. Mark all unrun tests as **NOT TESTED**.
 
+## Business-value validation and release gates
+
+Use this in addition to the [ADR's technical validation and stage-gate model](ADR-template.md).
+
+| Gate | Evidence required | Accountable reviewer | Observed result | Status |
+|---|---|---|---|---|
+| B0 — Baseline | Dated and attributable pre-change metrics | Business owner | Not measured | NOT RUN |
+| B1 — Feasibility | Data readiness, security/privacy approval, delivery and rollback plan | Architecture + security | Not reviewed | NOT RUN |
+| B2 — Pilot | Representative sample, control group or baseline comparison, defined success thresholds | Business sponsor | Not run | NOT RUN |
+| B3 — TCO | Usage-based estimate with dated rates, recurring cost and sensitivity | Finance partner | Not validated | NOT RUN |
+| B4 — Benefit realization | Post-change observed outcomes, costs, operational impact and exceptions | Business + finance | Not observed | NOT RUN |
+| B5 — Go/no-go | Recorded accept/defer/reject decision and residual risks | Named approver | No decision | NOT RUN |
+
+- Treat forecast savings, time reduction, risk reduction, and model quality as **hypotheses** until observed.
+- Preserve source dates, sample sizes, definitions, limitations, and links to sanitized evidence.
+- A failed mandatory security, privacy, or regulatory gate is an explicit **no-go**, independent of financial benefit.
+- Track **PASS / FAIL / BLOCKED / NOT RUN**, not a false binary completion checkbox.
+- Review again if scope, volumes, pricing, vendors, data classification, or critical risks change.
+
 ## Stakeholders and review
 Decision owner, finance partner, security/compliance reviewer, business sponsor, and revisit triggers.
 
