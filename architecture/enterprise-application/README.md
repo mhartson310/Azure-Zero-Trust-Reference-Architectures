@@ -2,6 +2,9 @@
 
 This reference architecture applies Zero Trust principles to a common enterprise application workload.
 
+[Leadership threat-model summary](../../docs/threat-model-leadership-summary.md) · [Executive decision brief](../../docs/executive-decision-brief.md)
+
+
 ![Zero Trust Enterprise Application on Azure](zero-trust-enterprise-application.svg)
 
 ## Architecture
