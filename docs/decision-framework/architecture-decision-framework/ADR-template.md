@@ -31,6 +31,17 @@ System boundary, data classes, users, dependencies, regulatory obligations, regi
 ## Decision and rationale
 Decision, trade-offs, why alternatives were rejected, and the accountable approver. If unresolved, retain **Proposed** status.
 
+## Consequences and strongest objection
+
+An ADR should surface the cost of the chosen design, not only its benefits:
+
+- **What becomes harder:** <specific trade-off, operational constraint, or future migration burden>
+- **Strongest reasonable argument against this option:** <the best objection a skeptical reviewer could raise; respond with evidence or mark unresolved>
+- **Residual risk owner and review date:** <named accountable role, due date, exception or mitigation>
+- **Decision reversal trigger:** <measurable condition requiring reconsideration>
+
+Keep this section short enough for a reviewer to understand the decision in a quick read; put detailed tests and supporting analysis below.
+
 ## Financial and operational analysis
 State workloads, volumes, assumptions, dated prices, cost ranges, migration effort, support/monitoring, sensitivity and opportunity cost. No fabricated ROI.
 
