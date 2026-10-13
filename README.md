@@ -14,6 +14,10 @@ The goal is to move beyond diagrams and slogans into repeatable architecture pat
 
 Use the [reusable architecture decision framework](docs/decision-framework/architecture-decision-framework/README.md), [ADR template](docs/decision-framework/architecture-decision-framework/ADR-template.md), and [business-case template](docs/decision-framework/architecture-decision-framework/business-case-template.md). The [Zero Trust decision examples](docs/decision-framework/zero-trust-architecture-decisions.md) compare private connectivity, managed identity, and approval-gated response with explicit trade-offs, costs, and acceptance gates.
 
+## Leadership decision documents
+
+For a decision-first review, start with the [one-page executive decision brief](docs/executive-decision-brief.md) and [leadership threat-model summary](docs/threat-model-leadership-summary.md). Both distinguish proposed controls from unverified Azure outcomes; technical rationale, test plans, and evidence remain in the linked engineering documents.
+
 ## What this demonstrates
 
 - Zero Trust architecture across identity, privilege, networking, workloads, data, and monitoring;
