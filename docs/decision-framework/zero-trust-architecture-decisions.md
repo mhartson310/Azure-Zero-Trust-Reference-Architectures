@@ -4,6 +4,8 @@
 
 [Reusable framework](architecture-decision-framework/README.md) · [ADR template](architecture-decision-framework/ADR-template.md) · [Business-case template](architecture-decision-framework/business-case-template.md)
 
+[Executive decision brief](../executive-decision-brief.md) · [Leadership threat-model summary](../threat-model-leadership-summary.md) ·
+
 ## Business context
 
 Protect sensitive Azure workloads while reducing unnecessary access and making failures observable. The business case should measure **policy drift detection**, time to recognize unauthorized changes, verified access boundaries, and operator effort against actual baselines—not claim that Zero Trust delivers a universal percentage reduction in breaches.
@@ -29,7 +31,7 @@ Protect sensitive Azure workloads while reducing unnecessary access and making f
 - **Trade-off:** faster response versus the impact of erroneous destructive actions.
 - **Mandatory gates:** unique target identity, authenticated approver, narrow remediation scope, 404-aware outcome verification, audit trail, rollback.
 - **Decision hypothesis:** Automate triage; treat destructive remediation as **not production-ready** pending hardening and Azure tests.
-- **Evidence:** [Sentinel response work](https://github.com/mhartson310/Sentinel-KQL-Library/tree/main/deploy/playbooks/zero-trust), [evidence register](../docs/validation/evidence/README.md).
+- **Evidence:** [Sentinel response work](https://github.com/mhartson310/Sentinel-KQL-Library/tree/main/deploy/playbooks/zero-trust), [evidence register](../validation/evidence/README.md).
 
 ## Value and cost measurements
 
